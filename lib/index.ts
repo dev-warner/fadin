@@ -1,6 +1,8 @@
-import Fader, { FaderConfig } from "./fader";
+import Fadin, { FadinConfig } from "./fadin";
 
-export default (args: FaderConfig = {}) => Fader.createFader(args)
-export { FaderConfig };
+export { FadinConfig, Fadin};
+
+export default (items?: string, options: FadinConfig = {}) =>
+    new Fadin({selector: items, noInitalScrollEvent: false, ...options})
 
 

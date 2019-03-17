@@ -9,15 +9,14 @@ const pkg = require('./package.json')
 const libraryName = 'fader'
 
 export default {
-  input: `lib/${libraryName}.ts`,
+  input: `lib/index.ts`,
   output: [
-    { file: pkg.main, name: libraryName, format: 'umd', sourcemap: true },
-    { file: pkg.module, format: 'es', sourcemap: true },
+    { file: pkg.main, name: libraryName, format: 'iife', sourcemap: true },
   ],
   // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
   external: [],
   watch: {
-    include: 'src/**',
+    include: 'lib/**',
   },
   plugins: [
     json(),
