@@ -1,7 +1,7 @@
 import Animation from '../lib/animation';
 import Stack from '../lib/stack';
 
-fdescribe('animation', () => {
+describe('animation', () => {
 
     test('should not call start if not items', () => {
         document.body.innerHTML = `
