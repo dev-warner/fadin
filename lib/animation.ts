@@ -98,6 +98,7 @@ export default class Animation {
   }
 }
 
+/*** @ignore */
 interface IModel {
   visible: HTMLElement[]
   hidden: HTMLElement[]

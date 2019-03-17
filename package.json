@@ -2,14 +2,14 @@
   "name": "fadin",
   "version": "0.0.0-development",
   "description": "",
-  "main": "dist/fadin",
+  "main": "dist/fadin.js",
   "typings": "dist/types/fadin.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "lint": "tslint  --project tsconfig.json -t codeFrame 'lib/**/*.ts' 'test/**/*.ts'",
-    "build": "tsc --module commonjs && rollup -c rollup.config.ts && typedoc --out docs --target es5 --theme minimal --mode file lib",
+    "build": "tsc --module es2015 && rollup -c rollup.config.ts && typedoc --out docs --target es5 --theme minimal --mode file lib",
     "start": "rollup -c rollup.config.ts -w",
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watch",

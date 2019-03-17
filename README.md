@@ -13,7 +13,7 @@ docs: http://fadin-docs.surge.sh/
 $ npm install fadin
 ```
 
-```node
+```javascript
 const fadin = require('fadin')
 
 document.addEventListener("DOMContentLoaded", () => {

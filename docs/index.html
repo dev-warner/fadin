@@ -915,14 +915,14 @@ img { max-width: 100%; }
 		<li class=" tsd-kind-interface">
 			<a href="interfaces/fadinconfig.html" class="tsd-kind-icon">Fadin<wbr>Config</a>
 		</li>
-		<li class=" tsd-kind-interface tsd-is-not-exported">
-			<a href="interfaces/imodel.html" class="tsd-kind-icon">IModel</a>
-		</li>
 		<li class=" tsd-kind-type-alias tsd-is-not-exported">
 			<a href="globals.html#fadininit" class="tsd-kind-icon">Fadin<wbr>Init</a>
 		</li>
 		<li class=" tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
 			<a href="globals.html#userfunction" class="tsd-kind-icon">User<wbr>Function</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="globals.html#fadin" class="tsd-kind-icon">fadin</a>
 		</li>
 	</ul>
 </nav>
@@ -936,10 +936,10 @@ img { max-width: 100%; }
 			<h1 id="getting-started">Getting Started</h1>
 			<p>docs: <a href="http://fadin-docs.surge.sh/">http://fadin-docs.surge.sh/</a></p>
 			<pre><code class="language-sh">$ npm install fadin</code></pre>
-			<pre><code class="language-node">const fadin = require(&#39;fadin&#39;)
+			<pre><code class="language-javascript"><span class="hljs-keyword">const</span> fadin = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fadin'</span>)
 
-document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
-    fadin(&#39;.my-class&#39;, { delay: 200 })
+<span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">"DOMContentLoaded"</span>, () =&gt; {
+    fadin(<span class="hljs-string">'.my-class'</span>, { <span class="hljs-attr">delay</span>: <span class="hljs-number">200</span> })
 });
 </code></pre>
 			<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-class"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -964,7 +964,6 @@ document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
 						<h3>Interfaces</h3>
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-interface"><a href="interfaces/fadinconfig.html" class="tsd-kind-icon">Fadin<wbr>Config</a></li>
-							<li class="tsd-kind-interface tsd-is-not-exported"><a href="interfaces/imodel.html" class="tsd-kind-icon">IModel</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section tsd-is-not-exported">
@@ -972,6 +971,12 @@ document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-type-alias tsd-is-not-exported"><a href="globals.html#fadininit" class="tsd-kind-icon">Fadin<wbr>Init</a></li>
 							<li class="tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported"><a href="globals.html#userfunction" class="tsd-kind-icon">User<wbr>Function</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Functions</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-function"><a href="globals.html#fadin" class="tsd-kind-icon">fadin</a></li>
 						</ul>
 					</section>
 				</div>
@@ -985,7 +990,7 @@ document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
 				<div class="tsd-signature tsd-kind-icon">Fadin<wbr>Init<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in index.ts:3</li>
+						<li>Defined in <a href="https://github.com/dev-warner/fadin/blob/28caa68/lib/index.ts#L3">index.ts:3</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -1019,7 +1024,7 @@ document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
 				<div class="tsd-signature tsd-kind-icon">User<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in stack.ts:8</li>
+						<li>Defined in <a href="https://github.com/dev-warner/fadin/blob/28caa68/lib/stack.ts#L8">stack.ts:8</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -1043,6 +1048,35 @@ document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
 						</li>
 					</ul>
 				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Functions</h2>
+			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="fadin" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> fadin</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">fadin<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="interfaces/fadinconfig.html" class="tsd-signature-type">FadinConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/fadin.html" class="tsd-signature-type">Fadin</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/dev-warner/fadin/blob/28caa68/lib/index.ts#L5">index.ts:5</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> selector: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="interfaces/fadinconfig.html" class="tsd-signature-type">FadinConfig</a><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="classes/fadin.html" class="tsd-signature-type">Fadin</a></h4>
+					</li>
+				</ul>
 			</section>
 		</section>
 		<footer class="with-border-bottom">

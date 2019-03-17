@@ -2,8 +2,10 @@ import Fadin, { FadinConfig } from "./fadin";
 
 type FadinInit = (selector: string, options: FadinConfig) => Fadin;
 
-export default (selector?: string, options: FadinConfig = {}) =>
+const fadin = (selector?: string, options: FadinConfig = {}) =>
     new Fadin({selector, noInitalScrollEvent: false, ...options})
+
+export default fadin;
 
 export { FadinConfig, Fadin, FadinInit};
 

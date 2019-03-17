@@ -3,3 +3,6 @@ dist
 coverage
 .rpt2_cache
 .coveralls.yml
+.cache
+/examples/**/package.json
+/examples/**/package-lock.json

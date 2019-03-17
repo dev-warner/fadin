@@ -10,7 +10,7 @@ const libraryName = 'fader'
 
 export default {
   input: `lib/index.ts`,
-  output: { exports: 'named', file: `${pkg.main}.js`, name: libraryName, format: 'iife', sourcemap: true },
+  output: { exports: 'named', file: pkg.main, name: libraryName, format: 'iife', sourcemap: true },
   external: [],
   watch: {
     include: 'lib/**',
