@@ -4,6 +4,8 @@
 [![npm version](https://badge.fury.io/js/fadin.svg)](https://badge.fury.io/js/fadin)
 [![Build Status](https://travis-ci.org/dev-warner/fadin.svg?branch=master)](https://travis-ci.org/dev-warner/fadin)
 [![Coverage Status](https://coveralls.io/repos/github/dev-warner/fadin/badge.svg)](https://coveralls.io/github/dev-warner/fadin)
+  <a href="#badge">
+    <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square"></a>
 
 
 Extremely light onload fadin animation library.
