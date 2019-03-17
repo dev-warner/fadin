@@ -1,4 +1,3 @@
-
 # Fadin
 
 [![npm version](https://badge.fury.io/js/fadin.svg)](https://badge.fury.io/js/fadin)
@@ -13,6 +12,7 @@
 Extremely light onload fadin animation library.
 
 # Getting Started
+
  - [Documentation](http://fadin-docs.surge.sh/)
  - [Example site](http://fadin-example-basic.surge.sh/)
 
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 ```css
-.fade {
+.my-class {
     opacity: 0;
     transition: 0.3s opacity;
 }
