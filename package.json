@@ -48,7 +48,6 @@
     "typescript": "^3.0.3"
   },
   "precommit": [
-    "build:docs"
   ],
   "jest": {
     "transform": {
