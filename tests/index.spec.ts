@@ -1,5 +1,5 @@
 import fadin from '../lib'
-import Fadin from '../lib/fadin';
+import Fadin from '../lib/fadin'
 import Animation from '../lib/animation'
 
 jest.mock('../lib/animation')
