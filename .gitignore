@@ -6,3 +6,4 @@ coverage
 .cache
 /examples/**/package.json
 /examples/**/package-lock.json
+docs

@@ -3,7 +3,7 @@
   "version": "0.0.0-development",
   "description": "",
   "typings": "dist/types/index.d.ts",
-  "main": "dist/fadin.iife.js",
+  "main": "dist/fadin.umd.js",
   "module": "dist/fadin.cjs.js",
   "files": [
     "dist"

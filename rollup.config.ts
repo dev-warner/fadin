@@ -33,4 +33,4 @@ const config = (type, format) => ({
   ]
 })
 
-export default [config('main', 'iife'), config('module', 'cjs')]
+export default [config('main', 'umd'), config('module', 'cjs')]
