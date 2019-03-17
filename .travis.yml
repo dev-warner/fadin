@@ -11,11 +11,6 @@ jobs:
         skip_cleanup: true
         script:
           - npx semantic-release
-      deploy-docs:
-        provider: surge
-        skip_cleanup: true
-        project: ./docs/
-        domain: fadin.docs.surge.sh
 cache:
   directories:
     - node_modules
@@ -29,3 +24,9 @@ before_script:
 script:
   - npm run coveralls
   - npm run build
+
+after_deploy:
+  provider: surge
+  skip_cleanup: true
+  project: ./docs/
+  domain: fadin.docs.surge.sh
