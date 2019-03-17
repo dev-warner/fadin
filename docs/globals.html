@@ -912,14 +912,14 @@ img { max-width: 100%; }
 		<li class=" tsd-kind-class">
 			<a href="classes/fadin.html" class="tsd-kind-icon">Fadin</a>
 		</li>
-		<li class=" tsd-kind-class tsd-has-type-parameter">
-			<a href="classes/stack.html" class="tsd-kind-icon">Stack</a>
-		</li>
 		<li class=" tsd-kind-interface">
 			<a href="interfaces/fadinconfig.html" class="tsd-kind-icon">Fadin<wbr>Config</a>
 		</li>
 		<li class=" tsd-kind-interface tsd-is-not-exported">
 			<a href="interfaces/imodel.html" class="tsd-kind-icon">IModel</a>
+		</li>
+		<li class=" tsd-kind-type-alias tsd-is-not-exported">
+			<a href="globals.html#fadininit" class="tsd-kind-icon">Fadin<wbr>Init</a>
 		</li>
 		<li class=" tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
 			<a href="globals.html#userfunction" class="tsd-kind-icon">User<wbr>Function</a>
@@ -930,9 +930,11 @@ img { max-width: 100%; }
 	<div class="content-wrap">
 		<div class="tsd-panel tsd-typography">
 			<h1 id="fadin">Fadin</h1>
-			<p><a href="https://travis-ci.org/dev-warner/fadin"><img src="https://travis-ci.org/dev-warner/fadin.svg?branch=master" alt="Build Status"></a><a href="https://coveralls.io/github/dev-warner/fadin?branch=master"><img src="https://coveralls.io/repos/github/dev-warner/fadin/badge.svg?branch=master" alt="Coverage Status"></a></p>
+			<p><a href="https://travis-ci.org/dev-warner/fadin"><img src="https://travis-ci.org/dev-warner/fadin.svg?branch=master" alt="Build Status"></a>
+			<a href="https://coveralls.io/github/dev-warner/fadin?branch=master"><img src="https://coveralls.io/repos/github/dev-warner/fadin/badge.svg?branch=master" alt="Coverage Status"></a></p>
 			<p>Extremely light onload fadin animation library.</p>
 			<h1 id="getting-started">Getting Started</h1>
+			<p>docs: <a href="http://fadin-docs.surge.sh/">http://fadin-docs.surge.sh/</a></p>
 			<pre><code class="language-sh">$ npm install fadin</code></pre>
 			<pre><code class="language-node">const fadin = require(&#39;fadin&#39;)
 
@@ -941,7 +943,7 @@ document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
 });
 </code></pre>
 			<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-class"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-class"</span> <span class="hljs-attr">data-set-delay</span>=<span class="hljs-string">400</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-class"</span> <span class="hljs-attr">data-delay</span>=<span class="hljs-string">"0.4s"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-class"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
 			<h2 id="license">License</h2>
 			<p>This project is licensed under the MIT License - see the LICENSE.md file for details</p>
@@ -955,7 +957,6 @@ document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
 						<h3>Classes</h3>
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-class"><a href="classes/fadin.html" class="tsd-kind-icon">Fadin</a></li>
-							<li class="tsd-kind-class tsd-has-type-parameter"><a href="classes/stack.html" class="tsd-kind-icon">Stack</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
@@ -968,6 +969,7 @@ document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
 					<section class="tsd-index-section tsd-is-not-exported">
 						<h3>Type aliases</h3>
 						<ul class="tsd-index-list">
+							<li class="tsd-kind-type-alias tsd-is-not-exported"><a href="globals.html#fadininit" class="tsd-kind-icon">Fadin<wbr>Init</a></li>
 							<li class="tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported"><a href="globals.html#userfunction" class="tsd-kind-icon">User<wbr>Function</a></li>
 						</ul>
 					</section>
@@ -976,13 +978,47 @@ document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
 		</section>
 		<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 			<h2>Type aliases</h2>
+			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-is-not-exported">
+				<a name="fadininit" class="tsd-anchor"></a>
+				<h3>Fadin<wbr>Init</h3>
+				<div class="tsd-signature tsd-kind-icon">Fadin<wbr>Init<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/dev-warner/fadin/blob/ea07357/lib/index.ts#L3">index.ts:3</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+						<li class="tsd-parameter-siganture">
+							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><a href="interfaces/fadinconfig.html" class="tsd-signature-type">FadinConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/fadin.html" class="tsd-signature-type">Fadin</a></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<h4 class="tsd-parameters-title">Parameters</h4>
+									<ul class="tsd-parameters">
+										<li>
+											<h5>selector: <span class="tsd-signature-type">string</span></h5>
+										</li>
+										<li>
+											<h5>options: <a href="interfaces/fadinconfig.html" class="tsd-signature-type">FadinConfig</a></h5>
+										</li>
+									</ul>
+									<h4 class="tsd-returns-title">Returns <a href="classes/fadin.html" class="tsd-signature-type">Fadin</a></h4>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
 				<a name="userfunction" class="tsd-anchor"></a>
 				<h3>User<wbr>Function</h3>
 				<div class="tsd-signature tsd-kind-icon">User<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/dev-warner/fadin/blob/af30854/lib/stack.ts#L10">stack.ts:10</a></li>
+						<li>Defined in <a href="https://github.com/dev-warner/fadin/blob/ea07357/lib/stack.ts#L8">stack.ts:8</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">

@@ -17,7 +17,8 @@
     "semantic-release": "semantic-release",
     "precommit": "lint-staged",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
-    "travis-deploy-once": "travis-deploy-once"
+    "travis-deploy-once": "travis-deploy-once",
+    "build:docs": "typedoc --out docs --target es5 --theme minimal --mode file lib"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +28,7 @@
     "@types/node": "^11.11.3",
     "coveralls": "^3.0.3",
     "jest": "^24.5.0",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.14.3",
     "rollup": "^1.6.0",
     "rollup-plugin-commonjs": "^9.2.1",
@@ -43,6 +45,7 @@
     "typedoc": "^0.14.2",
     "typescript": "^3.0.3"
   },
+  "precommit": ["build:docs"],
   "jest": {
     "transform": {
       ".(ts|tsx)": "ts-jest"
