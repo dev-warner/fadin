@@ -15,7 +15,7 @@ jobs:
         provider: surge
         skip_cleanup: true
         project: ./docs/
-        domain: fadin.docs.surge.sh
+        domain: fadin-docs.surge.sh
 cache:
   directories:
     - node_modules
