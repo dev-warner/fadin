@@ -14,6 +14,7 @@ jobs:
 cache:
   directories:
     - node_modules
+
 before_install:
   - npm update
 install:
@@ -21,6 +22,8 @@ install:
 script:
   - npm run coveralls
   - npm run build
+before-deploy:
+  - npm install -g surge
 deploy:
   skip_cleanup: true
   provider: surge
