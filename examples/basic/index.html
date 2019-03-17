@@ -8,26 +8,44 @@
   </head>
   <body>
     <style>
+      * { box-sizing: border-box }
+
       section {
         display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
       }
 
       .fade {
         opacity: 0;
-        transition: 0.3s;
+        transition: 0.3s opacity;
       }
 
       .item {
+        margin: 10px;
+        height: calc(50vh - 20px);
+        width: calc(33.33% - 20px);
         background-color: #ccc;
-        height: 100vh;
-        width: calc(33.33% - 10px);
+        padding: 20px;
+        font-weight: 700;
+        font-size: 72px;
       }
     </style>
 
     <section>
-      <div class="fade item"></div>
-      <div class="fade item"></div>
-      <div class="fade item"></div>
+      <div class="fade item">1</div>
+      <div class="fade item">2</div>
+      <div class="fade item">3</div>
+      <div class="fade item" data-delay="0.6s">4 <span>Delay'd yo</span></div>
+      <div class="fade item">5</div>
+      <div class="fade item">6</div>
+
+      <div class="fade item">7</div>
+      <div class="fade item">8</div>
+      <div class="fade item">9</div>
+      <div class="fade item">10</div>
+      <div class="fade item">12</div>
+      <div class="fade item">13</div>
     </section>
 
     <script src="./index.js"></script>

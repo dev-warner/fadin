@@ -13,7 +13,8 @@ Extremely light onload fadin animation library.
 
 # Getting Started
 
-docs: http://fadin-docs.surge.sh/
+ - [Documentation](http://fadin-docs.surge.sh/)
+ - [Example site](http://fadin-example-basic.surge.sh/)
 
 run in your terminal
 
@@ -21,7 +22,6 @@ run in your terminal
 $ npm install fadin
 ```
 
-and in your js file
 
 ```javascript
 const fadin = require('fadin')
@@ -31,10 +31,19 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 ```
 
+
 ```html
 <div class="my-class"></div>
 <div class="my-class" data-delay="0.4s"></div>
 <div class="my-class"></div>
+```
+
+
+```css
+.fade {
+    opacity: 0;
+    transition: 0.3s opacity;
+}
 ```
 
 ## License
