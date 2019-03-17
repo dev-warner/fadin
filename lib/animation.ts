@@ -1,5 +1,8 @@
 import Stack from './stack'
 
+/**
+ * @ignore
+ */
 export default class Animation {
   private query: string
   private toAnimate: HTMLElement[]

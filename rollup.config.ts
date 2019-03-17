@@ -10,10 +10,7 @@ const libraryName = 'fader'
 
 export default {
   input: `lib/index.ts`,
-  output: [
-    { file: pkg.main, name: libraryName, format: 'iife', sourcemap: true },
-  ],
-  // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
+  output: { exports: 'named', file: `${pkg.main}.js`, name: libraryName, format: 'iife', sourcemap: true },
   external: [],
   watch: {
     include: 'lib/**',

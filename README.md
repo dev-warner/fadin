@@ -14,7 +14,10 @@ $ npm install fadin
 ```node
 const fadin = require('fadin')
 
-fadin('.my-class', { delay: 200 })
+document.addEventListener("DOMContentLoaded", () => {
+    fadin('.my-class', { delay: 200 })
+});
+
 ```
 ```html
 <div class="my-class"></div>
@@ -26,5 +29,6 @@ License
 ----
 
 This project is licensed under the MIT License - see the LICENSE.md file for details
+
 **Free Software, Hell Yeah!**
 

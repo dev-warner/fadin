@@ -1,7 +1,6 @@
 /**
- * Call a function on a set interval until all items called
+ * @ignore
  */
-
 interface StackConfig<T> {
   items: T[]
   func: UserFunction<T>

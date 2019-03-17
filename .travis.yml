@@ -4,11 +4,8 @@ node_js:
 
 jobs:
   include:
-    # Define the release stage that runs semantic-release
     - stage: release
       node_js: lts/*
-      # Advanced: optionally overwrite your default `script` step to skip the tests
-      # script: skip
       deploy:
         provider: script
         skip_cleanup: true
@@ -18,10 +15,13 @@ cache:
   directories:
     - node_modules
 before_install:
-- npm update
+  - npm update
 install:
-- npm install
+  - npm install
 script:
-- npm test
-- npm run coveralls
-- npm run build
+  - npm run coveralls
+  - npm run build
+deploy:
+  provider: surge
+  project: ./docs/
+  domain: fadin.docs.surge.sh
