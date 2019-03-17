@@ -11,6 +11,8 @@ jobs:
         skip_cleanup: true
         script:
           - npx semantic-release
+    - stage: docs
+      node_js: lts/*
       deploy:
         provider: surge
         skip_cleanup: true
