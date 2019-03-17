@@ -1,6 +1,8 @@
 # Fadin
 
-[![Build Status](https://travis-ci.org/dev-warner/fadin.svg?branch=master)](https://travis-ci.org/dev-warner/fadin)
+[![Build Status](https://travis-ci.org/dev-warner/fadin.svg?branch=master)](https://travis-ci.org/dev-warner/fadin)[![Coverage Status](https://coveralls.io/repos/github/dev-warner/fadin/badge.svg?branch=master)](https://coveralls.io/github/dev-warner/fadin?branch=master)
+
+
 Extremely light onload fadin animation library.
 
 # Getting Started
