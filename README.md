@@ -7,6 +7,8 @@ Extremely light onload fadin animation library.
 
 # Getting Started
 
+docs: http://fadin.docs.surge.sh/
+
 ```sh
 $ npm install fadin
 ```
