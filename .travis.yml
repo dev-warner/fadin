@@ -24,7 +24,7 @@ before_install:
   - npm update
 install:
   - npm install
-before-script:
+before_script:
   - npm install -g surge
 script:
   - npm run coveralls
