@@ -2,7 +2,7 @@
     "compilerOptions": {
       "moduleResolution": "node",
       "target": "es5",
-      "module":"es2015",
+      "module":"ES2015",
       "lib": ["dom"],
       "strict": true,
       "sourceMap": true,
