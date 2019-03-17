@@ -1,6 +1,4 @@
-/**
- * @ignore
- */
+/*** @ignore */
 interface StackConfig<T> {
   items: T[]
   func: UserFunction<T>
@@ -9,6 +7,7 @@ interface StackConfig<T> {
 
 type UserFunction<T> = (item?: T) => void
 
+/*** @ignore */
 export default class Stack<T> {
   private stack: T[]
   private userFunction: UserFunction<T>
@@ -26,13 +25,11 @@ export default class Stack<T> {
   }
 
   public pause() {
-    this.done = true
     clearInterval(this._interval)
   }
 
   public start() {
-    if (this.done) return
-
+    if (this.isDone()) return;
     this._interval = window.setInterval(this.fire.bind(this), this.delay)
   }
 
@@ -42,15 +39,15 @@ export default class Stack<T> {
   }
 
   private fire() {
+    this.userFunction(this.stack.shift())
+
     if (!this.stack.length) {
       this.done = true
       return clearInterval(this._interval)
     }
-
-    this.userFunction(this.stack.shift())
   }
 
   public isDone() {
-    return this.done
+    return this.stack.length <= 0;
   }
 }

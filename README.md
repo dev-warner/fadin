@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 ```
 ```html
 <div class="my-class"></div>
-<div class="my-class" data-set-delay=400></div>
+<div class="my-class" data-delay="0.4s"></div>
 <div class="my-class"></div>
 ```
 

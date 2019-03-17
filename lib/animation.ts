@@ -1,8 +1,6 @@
 import Stack from './stack'
 
-/**
- * @ignore
- */
+/*** @ignore */
 export default class Animation {
   private query: string
   private toAnimate: HTMLElement[]
@@ -26,6 +24,16 @@ export default class Animation {
     animate.start()
   }
 
+  public getItemsToAnimate() {
+    if (this.isDone()) return
+
+    const { visible, hidden } = this.getVisibleAndHiddenItems()
+
+    this.toAnimate = hidden
+
+    return visible
+  }
+
   public reset() {
     this.toAnimate = Array.from(
       document.querySelectorAll(this.query)
@@ -40,16 +48,6 @@ export default class Animation {
     })
   }
 
-  public getItemsToAnimate() {
-    if (this.isDone()) return
-
-    const { visible, hidden } = this.getVisibleAndHiddenItems()
-
-    this.toAnimate = hidden
-
-    return visible
-  }
-
   public isDone() {
     return this.toAnimate.length <= 0
   }
@@ -57,10 +55,12 @@ export default class Animation {
   public assignDelayAndOpacity(elem?: HTMLElement) {
     if (!elem) return
 
-    Object.assign(elem.style, {
-      opacity: 1,
-      transitionDelay: this.getDelay(elem)
-    })
+    const transitionDelay = this.getDelay(elem)
+    Object.assign(elem.style, { opacity: 1 })
+
+    if (transitionDelay) {
+      Object.assign(elem.style, { transitionDelay })
+    }
   }
 
   private getVisibleAndHiddenItems() {
@@ -80,7 +80,7 @@ export default class Animation {
 
   private getDelay(elem: HTMLElement) {
     if (elem && elem.dataset && elem.dataset.delay) {
-      return elem.dataset.delay || '0s'
+      return elem.dataset.delay;
     }
   }
 
