@@ -3,8 +3,9 @@
   "version": "0.0.0-development",
   "description": "",
   "typings": "dist/types/index.d.ts",
-  "main": "dist/fadin.umd.js",
-  "module": "dist/fadin.cjs.js",
+  "browser": "dist/fadin.umd.js",
+  "main": "dist/fadin.cdj.js",
+  "module": "dist/fadin.es.js",
   "files": [
     "dist"
   ],

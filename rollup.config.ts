@@ -10,27 +10,33 @@ const pkg = require('./package.json')
 
 const libraryName = 'fadin'
 
-const config = (type, format) => ({
-  input: `lib/index.ts`,
-  output: {
-    file: pkg[type],
-    name: libraryName,
-    exports: 'named',
-    format,
-    sourcemap: true
-  },
-  external: [],
-  watch: {
-    include: 'lib/**'
-  },
-  plugins: [
-    json(),
-    typescript({ useTsconfigDeclarationDir: true }),
-    commonjs(),
-    resolve(),
-    sourceMaps(),
-    uglify()
-  ]
-})
-
-export default [config('main', 'umd'), config('module', 'cjs')]
+export default [
+	{
+		input: 'lib/index.ts',
+		output: {
+			name: libraryName,
+			file: pkg.browser,
+			format: 'umd'
+    },
+    watch: {
+      include: 'lib/**'
+    },
+		plugins: [
+      typescript({ useTsconfigDeclarationDir: true }),
+			resolve(),
+      commonjs(),
+      sourceMaps(),
+      uglify()
+		]
+	},
+	{
+		input: 'lib/index.ts',
+		output: [
+			{ file: pkg.main, format: 'cjs' },
+			{ file: pkg.module, format: 'es' }
+    ],
+    plugins: [
+      typescript({ useTsconfigDeclarationDir: true }),
+      sourceMaps(),
+    ]
+	}]
