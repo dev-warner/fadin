@@ -4,13 +4,17 @@ import sourceMaps from 'rollup-plugin-sourcemaps'
 import typescript from 'rollup-plugin-typescript2'
 import json from 'rollup-plugin-json'
 
+import { uglify } from "rollup-plugin-uglify";
+
 const pkg = require('./package.json')
 
 const libraryName = 'fadin'
 
 export default {
   input: `lib/index.ts`,
-  output: { exports: 'named', file: pkg.main, name: libraryName, format: 'iife', sourcemap: true },
+  output: [
+    { exports: 'named', file: pkg.main, name: libraryName, format: 'iife', sourcemap: true },
+  ],
   external: [],
   watch: {
     include: 'lib/**',
@@ -19,6 +23,7 @@ export default {
     json(),
     typescript({ useTsconfigDeclarationDir: true }),
     commonjs(),
+    uglify(),
     resolve(),
     sourceMaps(),
   ],
