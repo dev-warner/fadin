@@ -6,7 +6,7 @@ import json from 'rollup-plugin-json'
 
 const pkg = require('./package.json')
 
-const libraryName = 'fader'
+const libraryName = 'fadin'
 
 export default {
   input: `lib/index.ts`,
