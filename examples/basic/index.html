@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      section {
+        display: flex;
+      }
+
+      .fade {
+        opacity: 0;
+        transition: 0.3s;
+      }
+
+      .item {
+        background-color: #ccc;
+        height: 100vh;
+        width: calc(33.33% - 10px);
+      }
+    </style>
+
+    <section>
+      <div class="fade item"></div>
+      <div class="fade item"></div>
+      <div class="fade item"></div>
+    </section>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
