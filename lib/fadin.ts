@@ -64,7 +64,7 @@ export default class Fadin {
 
   /**
    * Sends scroll event to window to fade in items that are inview onload
-   * fadin.sendScrol()
+   * fadin.sendScroll()
    *
    * just alias for `window.dispatchEvent(new Event("scroll"));`
    */

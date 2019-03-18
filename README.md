@@ -1,15 +1,14 @@
 # Fadin
 
-[![npm version](https://badge.fury.io/js/fadin.svg)](https://badge.fury.io/js/fadin)
 [![Build Status](https://travis-ci.org/dev-warner/fadin.svg?branch=master)](https://travis-ci.org/dev-warner/fadin)
 [![Coverage Status](https://coveralls.io/repos/github/dev-warner/fadin/badge.svg)](https://coveralls.io/github/dev-warner/fadin)
 <a href="#badge">
 <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square"></a>
-<a href="https://www.npmjs.com/package/prettier">
+<a href="https://github.com/dev-warner/fadin">
 <img alt="npm version" src="https://img.shields.io/npm/v/fadin.svg?style=flat-square"></a>
 <a><img alt="MIT" src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat"></a>
 
-Extremely light onload fadin animation library.
+Extremely light fade in animation library. 3kb in size ungzipped :rocket:
 
 # Getting Started
 
@@ -19,7 +18,7 @@ Extremely light onload fadin animation library.
 run in your terminal
 
 ```sh
-$ npm install fadin
+$ npm i fadin
 ```
 
 
@@ -45,6 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
     transition: 0.3s opacity;
 }
 ```
+#Todo list
+ - add more documation comments / clear up
+ - add options to fade in my direction
+ - make more performant/smooth
+ - let options be functions and values
 
 ## License
 
