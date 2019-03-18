@@ -1,9 +1,17 @@
-import AnimationService from "./animation";
+import AnimationService, { AnimationFunction } from "./animation";
 
 export interface FadinConfig {
   delay?: number;
   selector?: string;
   noInitalScrollEvent?: boolean;
+  animationFunction?: AnimationFunction | undefined;
+}
+
+const initalState: FadinConfig = {
+  delay: 200,
+  selector: '.fadin',
+  noInitalScrollEvent: false,
+  animationFunction: undefined
 }
 
 export default class Fadin {
@@ -11,11 +19,22 @@ export default class Fadin {
   private animationService: AnimationService;
   private _detach: Function;
 
-  constructor(config: FadinConfig = {}) {
-    this.animationService = new AnimationService(config.selector || ".fadin");
+  /**
+   * ```
+   * import { Fader } from 'fadin';
+   *
+   * new Fader({selector: '.className', delay: 400})
+   * ```
+   * will create a new instance of fadin setup event listeners
+   * and self destructs when all animations compilete
+   */
+  constructor(options: FadinConfig = initalState) {
+    const config = Object.assign({}, initalState, options);
+
+    this.animationService = new AnimationService(config.selector as string);
 
     this._detach = this.setUpEventListener("scroll", () => {
-      this.animationService.animateItems(config.delay || 0);
+      this.animationService.animateItems(config.delay as number, config.animationFunction);
     });
 
     if (!config.noInitalScrollEvent) this.sendScroll();
@@ -45,6 +64,9 @@ export default class Fadin {
 
   /**
    * Sends scroll event to window to fade in items that are inview onload
+   * fadin.sendScrol()
+   *
+   * just alias for `window.dispatchEvent(new Event("scroll"));`
    */
   public sendScroll() {
     window.dispatchEvent(new Event("scroll"));

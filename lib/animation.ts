@@ -1,4 +1,6 @@
-import Stack from './stack'
+import Stack, { UserFunction } from './stack'
+
+export type AnimationFunction = UserFunction<HTMLElement>;
 
 /*** @ignore */
 export default class Animation {
@@ -10,7 +12,7 @@ export default class Animation {
     this.toAnimate = Array.from(document.querySelectorAll(query))
   }
 
-  public animateItems(delay: number) {
+  public animateItems(delay: number, func?: AnimationFunction) {
     const items = this.getItemsToAnimate()
 
     if (!items) return
@@ -18,7 +20,7 @@ export default class Animation {
     const animate = new Stack<HTMLElement>({
       items,
       delay,
-      func: elem => this.assignDelayAndOpacity(elem)
+      func: elem => func ? func(elem as HTMLElement) : this.assignDelayAndOpacity(elem)
     })
 
     animate.start()

@@ -5,14 +5,14 @@ interface StackConfig<T> {
   delay: number
 }
 
-type UserFunction<T> = (item?: T) => void
+/*** @ignore */
+export type UserFunction<T> = (item?: T) => any
 
 /*** @ignore */
 export default class Stack<T> {
   private stack: T[]
   private userFunction: UserFunction<T>
   private delay: number
-  private done: Boolean
 
   _interval: any
 
@@ -20,8 +20,6 @@ export default class Stack<T> {
     this.stack = config.items
     this.userFunction = config.func
     this.delay = config.delay
-
-    this.done = false
   }
 
   public pause() {
@@ -39,10 +37,13 @@ export default class Stack<T> {
   }
 
   private fire() {
+    this.check();
     this.userFunction(this.stack.shift())
+    this.check();
+  }
 
+  private check() {
     if (!this.stack.length) {
-      this.done = true
       return clearInterval(this._interval)
     }
   }

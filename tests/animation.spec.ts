@@ -27,6 +27,19 @@ describe('animation', () => {
     expect(animation.assignDelayAndOpacity).not.toThrow();
   })
 
+  test('should be able to attach own function', () => {
+    jest.useFakeTimers()
+    document.body.innerHTML = `
+        <div class="fade"></div>
+        <div class="fade"></div>
+    `
+    const animation = new Animation('.fade')
+    const mock = jest.fn();
+    animation.animateItems(0, mock);
+    jest.advanceTimersByTime(5);
+    expect(mock).toHaveBeenCalledTimes(2);
+  })
+
   describe('getItemsToAnimate', () => {
     test('should not call if is Done', () => {
       document.body.innerHTML = `
