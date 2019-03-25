@@ -44,9 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
     transition: 0.3s opacity;
 }
 ```
-#Todo list
- - add more documation comments / clear up
- - add options to fade in my direction
+# Todo list
+ - add more documentaion comments / clear up
+ - add options to fade in any direction
  - make more performant/smooth
  - let options be functions and values
 
